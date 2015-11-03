@@ -14,11 +14,11 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            var uri = new Uri(@"https://qa01.csod.com/services/api/sts/Session?userName=soapadmin&alias=soapadmin1");
+            var uri = new Uri(@"https://<yourportal>.csod.com/services/api/sts/Session?userName=<yourusername)&alias=<youralias>");
             var request = (HttpWebRequest)WebRequest.Create(uri);
 
-            var apiId = "wa2vbauugyvt";
-            var apiSecret = "tDCBh1b8tDO8lGVvieNqVCFUZgsPm1OoxYW4OM3WgEt21BSBpICULBe9sYaNZAEoRLVe49Fply/zgjKBP6V4gg==";
+            var apiId = "<your API ID goes here eg: wa2vbauugyvv>";
+            var apiSecret = "<your API Secret goes here eg: tDBCh1b8tDO8lGVvieNqVCFUZgsPm1OoxYW4OM3WgEt21BSBpICULBe9sYaNZAEoRLVe49Fply/zgjKBP6V4gg==>";
 
             request.Headers.Add("x-csod-date", DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.000"));
             request.Headers.Add("x-csod-api-key", apiId);
